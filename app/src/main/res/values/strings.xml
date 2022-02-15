@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">Book Reader Firebase</string>
+    <string name="app_name">Hikmatli Kitoblar</string>
+
+    <string name="downloadFolder">Yuklab olish muvaffaqiyatli!\n Ichki xotiraga saqlandi/Android/data/com.eneskyyşık.comicreader/files/Comic Books\n</string>
+    <string name="bookshelf">Bookshelf</string>
+    <string name="favorite">Favorite</string>
+    <string name="desc">desc</string>
+    <string name="overview">Imtihon</string>
+    <string name="download">Download</string>
+    <string name="search_for_comic_books">Search for books</string>
+    <string name="textview">TextView</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="read">Read</string>
+    <string name="comments">Comments</string>
+    <string name="constructing">Yaqinda bo\'lib qoladi</string>
+    <string name="comic_downloading">Kitob yuklab olish</string>
+    <string name="zero_percent">0 %</string>
+    <string name="dash">-</string>
+    <string name="order_by_review">Ballar bo\'yicha saralash</string>
+    <string name="name_surname">Ism familiyasi</string>
+    <string name="long_desc_hint">Kitob haqidagi sharhingizni shu yerda yozishingiz mumkin.</string>
+    <string name="anonim">Anonim</string>
+    <string name="share_review">Sharh almashish</string>
+    <string name="write_review">Sharhingizni yozing</string>
+    <string name="max_char">400</string>
+    <string name="no_review_yet">Hali ko\'rib chiqilmagan</string>
+    <string name="be_the_first">Birinchi bo\'lib ko\'rib chiqing!</string>
+    <string name="reviews">sharhlar</string>
+    <string name="detail">Tafsilot</string>
+    <string name="add_review">Ko‘rib chiqish</string>
 </resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="uz.behadllc.bookreaderfirebase.ui.splash.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/action_splashFragment_to_bookShelfFragment"
+            app:destination="@id/bookShelfFragment"
+            app:popUpTo="@id/splashFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/to_right"
+            app:popExitAnim="@anim/from_left"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookShelfFragment"
+        android:name="uz.behadllc.bookreaderfirebase.ui.main.bookshelf.BookShelfFragment"
+        android:label="BookShelfFragment">
+        <action
+            android:id="@+id/action_bookShelfFragment_to_bookDetailFragment"
+            app:destination="@id/bookDetailFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/to_right"
+            app:popExitAnim="@anim/from_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetailFragment"
+        android:name="com.eneskayiklik.comicreader.ui.main.detail.BookDetailFragment"
+        android:label="BookDetailFragment">
+        <action
+            android:id="@+id/action_bookDetailFragment_to_readBookFragment"
+            app:destination="@id/readBookFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/to_right"
+            app:popExitAnim="@anim/from_left" />
+        <argument
+            android:name="currentBook"
+            app:argType="uz.behadllc.bookreaderfirebase.model.book.Book" />
+        <action
+            android:id="@+id/action_bookDetailFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/to_right"
+            app:popExitAnim="@anim/from_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/readBookFragment"
+        android:name="uz.behadllc.bookreaderfirebase.ui.main.read.ReadBookFragment"
+        android:label="ReadBookFragment">
+        <argument
+            android:name="currentBook"
+            app:argType="uz.behadllc.bookreaderfirebase.model.book.Book" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="uz.behadllc.bookreaderfirebase.ui.favorite.FavoriteFragment"
+        android:label="FavoriteFragment" />
+    <fragment
+        android:id="@+id/downloadFragment"
+        android:name="uz.behadllc.bookreaderfirebase.ui.main.download.DownloadFragment"
+        android:label="DownloadFragment" />
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="uz.behadllc.bookreaderfirebase.ui.main.detail.comment.CommentsFragment"
+        android:label="CommentsFragment">
+        <action
+            android:id="@+id/action_commentsFragment_to_addCommentFragment"
+            app:destination="@id/addCommentFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/to_right"
+            app:popExitAnim="@anim/from_left" />
+        <argument
+            android:name="currentBook"
+            app:argType="uz.behadllc.bookreaderfirebase.model.book.Book" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCommentFragment"
+        android:name="uz.behadllc.bookreaderfirebase.ui.main.detail.comment.AddCommentFragment"
+        android:label="AddCommentFragment">
+        <argument
+            android:name="currentBook"
+            app:argType="uz.behadllc.bookreaderfirebase.model.book.Book" />
+    </fragment>
+</navigation>

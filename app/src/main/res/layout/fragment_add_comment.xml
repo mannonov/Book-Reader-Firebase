@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edtNameSurname"
+        style="@style/SubText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/name_surname"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:maxLength="15"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@+id/switchIsAnonim"
+        app:layout_constraintStart_toStartOf="@+id/btnBackAddComment"
+        app:layout_constraintTop_toBottomOf="@+id/btnBackAddComment" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/ratingReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:progressTint="@color/colorDuskYellow"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <EditText
+            android:id="@+id/edtFullReview"
+            style="@style/SubText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="start|top"
+            android:hint="@string/long_desc_hint"
+            android:inputType="textMultiLine"
+            android:lines="10"
+            android:maxLength="400"
+            android:importantForAutofill="no"
+            android:padding="4dp" />
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchIsAnonim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/anonim"
+        android:backgroundTint="@color/colorButtonTintDark"
+        app:layout_constraintBottom_toBottomOf="@+id/edtNameSurname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtNameSurname" />
+
+    <Button
+        android:id="@+id/btnShareReview"
+        style="@style/ButtonPrimary"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/share_review"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/write_review"
+        app:layout_constraintStart_toStartOf="@+id/edtNameSurname"
+        app:layout_constraintTop_toBottomOf="@+id/edtNameSurname" />
+
+    <TextView
+        android:id="@+id/tvCharReduce"
+        style="@style/SubText"
+        android:layout_marginBottom="2dp"
+        android:text="@string/max_char"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView" />
+
+    <ImageView
+        android:id="@+id/btnBackAddComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/desc"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back"
+        app:tint="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_review"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnBackAddComment" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/PetProjects/BookReaderFirebase/app/src/main/res/layout/activity_main.xml" value="0.11018518518518519" />
+        <entry key="..\:/PetProjects/BookReaderFirebase/app/src/main/res/layout/drawer_nav_header.xml" value="0.27447916666666666" />
+        <entry key="..\:/PetProjects/BookReaderFirebase/app/src/main/res/layout/fragment_add_comment.xml" value="0.18796296296296297" />
+        <entry key="..\:/PetProjects/BookReaderFirebase/app/src/main/res/layout/fragment_book_detail.xml" value="0.27447916666666666" />
+        <entry key="..\:/PetProjects/BookReaderFirebase/app/src/main/res/layout/fragment_bookshelf.xml" value="0.18796296296296297" />
+        <entry key="..\:/PetProjects/BookReaderFirebase/app/src/main/res/layout/fragment_comments.xml" value="0.27447916666666666" />
+        <entry key="..\:/PetProjects/BookReaderFirebase/app/src/main/res/layout/fragment_download.xml" value="0.27447916666666666" />
+        <entry key="..\:/PetProjects/BookReaderFirebase/app/src/main/res/layout/fragment_favorite.xml" value="0.27447916666666666" />
+        <entry key="..\:/PetProjects/BookReaderFirebase/app/src/main/res/layout/fragment_read_book.xml" value="0.18796296296296297" />
+        <entry key="..\:/PetProjects/BookReaderFirebase/app/src/main/res/layout/one_row_book.xml" value="0.27447916666666666" />
+        <entry key="..\:/PetProjects/BookReaderFirebase/app/src/main/res/layout/one_row_comment.xml" value="0.21203703703703702" />
+        <entry key="..\:/PetProjects/BookReaderFirebase/app/src/main/res/menu/main_drawer_menu.xml" value="0.27447916666666666" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
