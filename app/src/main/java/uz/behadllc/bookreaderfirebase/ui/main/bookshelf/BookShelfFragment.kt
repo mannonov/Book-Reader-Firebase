@@ -13,13 +13,15 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
-import uz.behadllc.bookreaderfirebase.model.book.Book
-import uz.behadllc.bookreaderfirebase.utils.Functions.makeInvisible
-import uz.behadllc.bookreaderfirebase.utils.Functions.makeVisible
+import com.google.android.flexbox.*
 import dagger.hilt.android.AndroidEntryPoint
 import jp.wasabeef.recyclerview.animators.SlideInLeftAnimator
 import kotlinx.android.synthetic.main.fragment_bookshelf.*
 import uz.behadllc.bookreaderfirebase.R
+import uz.behadllc.bookreaderfirebase.model.book.Book
+import uz.behadllc.bookreaderfirebase.utils.Functions.makeInvisible
+import uz.behadllc.bookreaderfirebase.utils.Functions.makeVisible
+
 
 @AndroidEntryPoint
 class BookShelfFragment : Fragment(R.layout.fragment_bookshelf) {
@@ -73,7 +75,7 @@ class BookShelfFragment : Fragment(R.layout.fragment_bookshelf) {
         recyclerViewBooks.itemAnimator = SlideInLeftAnimator()
         recyclerViewBooks.adapter = adapter
         recyclerViewBooks.layoutManager =
-            GridLayoutManager(this.requireContext(), 3, GridLayoutManager.VERTICAL, false)
+            GridLayoutManager(requireActivity(), 2)
     }
 
     private fun changeLayoutVisibilities(isVisible: Boolean) {

@@ -1,4 +1,4 @@
-package com.eneskayiklik.comicreader.ui.main.detail
+package uz.behadllc.bookreaderfirebase.ui.main.detail
 
 import android.os.Bundle
 import android.view.View
@@ -17,12 +17,17 @@ import uz.behadllc.bookreaderfirebase.utils.Variables.downloadingItems
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_book_detail.*
 import uz.behadllc.bookreaderfirebase.R
+import uz.behadllc.bookreaderfirebase.database.entitiy.BookModelDatabase
+import uz.behadllc.bookreaderfirebase.ui.favorite.FavoriteViewModel
 
 @AndroidEntryPoint
 class BookDetailFragment : Fragment(R.layout.fragment_book_detail) {
+
     private val navArgs by navArgs<BookDetailFragmentArgs>()
     private val redBookViewModel: ReadBookViewModel by viewModels()
     private var isDownloading = false
+    private val favoriteViewModel: FavoriteViewModel by viewModels()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupData()
@@ -62,6 +67,21 @@ class BookDetailFragment : Fragment(R.layout.fragment_book_detail) {
         icBack.setOnClickListener {
             this.requireActivity().onBackPressed()
         }
+
+        bookMark.setOnClickListener {
+            favoriteViewModel.addBooks(BookModelDatabase(
+                bookUrl = navArgs.currentBook.bookUrl,
+                iconUrl = navArgs.currentBook.iconUrl,
+                name = navArgs.currentBook.name,
+                desc = navArgs.currentBook.desc,
+                authorName = navArgs.currentBook.authorName,
+                docId = navArgs.currentBook.docId,
+                pageCount = navArgs.currentBook.pageCount,
+                reviewCount = navArgs.currentBook.reviewCount,
+                rating = navArgs.currentBook.rating
+            ))
+        }
+
     }
 
     private fun setupObserver() {

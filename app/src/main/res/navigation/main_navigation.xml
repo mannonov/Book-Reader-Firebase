@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/bookDetailFragment"
-        android:name="com.eneskayiklik.comicreader.ui.main.detail.BookDetailFragment"
+        android:name="uz.behadllc.bookreaderfirebase.ui.main.detail.BookDetailFragment"
         android:label="BookDetailFragment">
         <action
             android:id="@+id/action_bookDetailFragment_to_readBookFragment"

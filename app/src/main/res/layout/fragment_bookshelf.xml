@@ -78,6 +78,7 @@
                 android:id="@+id/recyclerViewBooks"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
                 app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 
             <com.airbnb.lottie.LottieAnimationView
